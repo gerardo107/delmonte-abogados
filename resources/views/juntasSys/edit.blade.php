@@ -38,9 +38,10 @@ Editar junta
     <div class="row">
       <div class="input-field col s12">
         {!! Form::text('nombre','',[
-              'class'=>"validate"
+              'class'=>"validate",
+              'placeholder' => "Nombre"
             ])!!}
-            <label for="icon_prefix">Nombre</label>
+            
       </div>
     </div>
     <div class="row">
@@ -48,28 +49,31 @@ Editar junta
         {!! Form::text('fecha','',[
               'class'=>"validate",
               'id'=>"datepicker",
+              'placeholder' => "Fecha"
             ])!!}
-            <label for="icon_prefix">Fecha</label>
+            
       </div>
     </div>
       <div class="row">
       <div class="input-field col s12">
         {!! Form::text('hora','',[
-              'class'=>"validate"
+              'class'=>"validate",
+              'placeholder' => "Hora"
             ])!!}
-            <label for="icon_prefix">Hora</label>
+           
       </div>
     </div>
     <div class="row">
       <div class="input-field col s12">
         {!! Form::text('asunto','',[
-              'class'=>"validate"
+              'class'=>"validate",
+              'placeholder' => "Asunto"
             ])!!}
-            <label for="icon_prefix">Asunto</label>
+            
       </div>
     </div>
     <button class="btn waves-effect waves-light left" type="submit" name="action" style="margin-right: 2em"
-    3 > {!!Form::submit('Editar Cliente')!!}</button>
+    3 > {!!Form::submit('Editar Junta')!!}</button>
     {!!Form::close()!!}
 
   </div>

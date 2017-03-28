@@ -14,7 +14,7 @@ use App\Http\Requests;
 | PagesController
 |--------------------------------------------------------------------------
 |
-| Este controlador nsirve para regrresar las vistas de todas las paginas
+| Este controlador sirve para regrresar las vistas de todas las paginas
 | estaticas del sitema.
 | 
 */

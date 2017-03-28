@@ -5,14 +5,15 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 class LoginTest extends TestCase
 {
     /**
-     * A basic test example.
-     *
-     * @return void
+     * Test para checar si se hace un correcto ingreso de credenciales en el 
+     * login. 
+     * la primera funcion es un test que es valido las demas son test de error.
      */
     public function testExample()
     {
         $this->assertTrue(true);
     }
+    //valid test
     public function testSuccessLogin()
     {
         $this->visit('/login')
@@ -21,6 +22,7 @@ class LoginTest extends TestCase
              ->press('Login')
              ->seePageIs('/home');
     }
+     //invalid test
     public function testBadLogin()
     {
         $this->visit('/login')
@@ -30,6 +32,7 @@ class LoginTest extends TestCase
              ->see('The email field is required')
              ->see('The password field is required');
     }
+     //invalid test
     public function testBadEmailLogin()
     {
         $this->visit('/login')
@@ -38,6 +41,7 @@ class LoginTest extends TestCase
              ->press('Login')
              ->see('These credentials do not match our records');
     }
+     //invalid test
     public function testBadPassLogin()
     {
         $this->visit('/login')

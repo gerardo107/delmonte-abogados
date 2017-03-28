@@ -48,8 +48,8 @@ $(window).on('load', function() {
             <div class="slider-wrapper theme-default" >    
                 <div id="slider" class="nivoSlider">
                     <a href="index.html"><img src="imagenes/inicio.jpg" alt="" /></a>  
-                    <a href="nosotros.html"><img src="imagenes/nosotros.jpg" alt="" title="Conócenos" /></a>
-                    <a href="contacto.html"><img src="imagenes/contacto.jpg" alt="" title="contacto" /></a>
+                    <a href="{{route('nosotros')}}"><img src="imagenes/nosotros.jpg" alt="" title="Conócenos" /></a>
+                    <a href="{{route('contacto')}}"><img src="imagenes/contacto.jpg" alt="" title="contacto" /></a>
                 </div>  
             </div> 
         </div>  

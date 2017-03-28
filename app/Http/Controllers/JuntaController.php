@@ -9,6 +9,16 @@ use App\Http\Requests\JuntaFormRequest;
 use Illuminate\Http\Request;
 use App\Junta;
 
+/*
+|--------------------------------------------------------------------------
+|controller Juntas
+|--------------------------------------------------------------------------
+|
+| Este controlador se encarga de ser el intermediario que procesa la informacion
+| entre la view y el model de juntas.
+| 
+*/
+
 class JuntaController extends Controller
 {
 	
@@ -16,7 +26,7 @@ class JuntaController extends Controller
     {
         $this->middleware('auth');
     }
-
+    //funcion que regresa el index de juntas
     public function index(){
 
     	$juntas = Junta::all();
@@ -25,11 +35,12 @@ class JuntaController extends Controller
     		->with('juntas', $juntas);
 
     }
-
+    //funcion para  crear una nueva junta
     public function create(){
     	return view('juntasSys.create');
     }
 
+    //funcion para  almacenar una nueva junta y hace return a la vista de index. 
     public function store(JuntaFormRequest $request)
 	{    
 		$inputs = $request-> all();
@@ -41,7 +52,9 @@ class JuntaController extends Controller
 			
 	}
 
-          public function show($id){
+    //funcion para  mostrar una junta.
+    public function show($id)
+    {
 
         $juntas = Junta::find($id);
 
@@ -49,7 +62,7 @@ class JuntaController extends Controller
             ->with('juntas', $juntas);
 
     }
-
+    //funcion para  editar una junta.
      public function edit($id){
 
     	$junta = Junta::find($id);
@@ -57,7 +70,7 @@ class JuntaController extends Controller
     	return view('juntasSys.edit', compact('junta', $junta));
 
     }
-     
+     //funcion para  eliminar una junta.
      public function destroy($id){
 
     	$juntas= Junta::find($id)->delete();;

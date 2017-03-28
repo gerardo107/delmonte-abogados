@@ -38,57 +38,64 @@ Editar cliente
     <div class="row">
       <div class="input-field col s12">
         {!! Form::text('nombre','',[
-              'class'=>"validate"
+              'class'=>"validate",
+              'placeholder' => "Nombre"
             ])!!}
-            <label for="icon_prefix">Nombre</label>
+            
       </div>
     </div>
     <div class="row">
       <div class="input-field col s12">
         {!! Form::text('apellidoP','',[
-              'class'=>"validate"
+              'class'=>"validate",
+              'placeholder' => "Apellido Paterno"
             ])!!}
-            <label for="icon_prefix">Apellido Paterno</label>
+            
       </div>
     </div>
       <div class="row">
       <div class="input-field col s12">
         {!! Form::text('apellidoM','',[
-              'class'=>"validate"
+              'class'=>"validate",
+              'placeholder' => "Apellido Materno"
             ])!!}
-            <label for="icon_prefix">Apellido Materno</label>
+         
       </div>
     </div>
     <div class="row">
       <div class="input-field col s12">
         {!! Form::text('correo','',[
-              'class'=>"validate"
+              'class'=>"validate",
+              'placeholder' => "Correo"
             ])!!}
-            <label for="icon_prefix">Correo</label>
+            
       </div>
     </div>
     <div class="row">
       <div class="input-field col s12">
         {!! Form::text('telefono','',[
-              'class'=>"validate"
+              'class'=>"validate",
+              'placeholder' => "Telefono"
             ])!!}
-            <label for="icon_prefix">Telefono</label>
+          
       </div>
     </div>
     <div class="row">
       <div class="input-field col s12">
         {!! Form::text('direccion','',[
-              'class'=>"validate"
+              'class'=>"validate",
+              'placeholder' => "Dirección"
             ])!!}
-            <label for="icon_prefix"> Dirección</label>
+
       </div>
     </div>
     <div class="row">
       <div class="input-field col s12">
         {!! Form::text('rfc','',[
-              'class'=>"validate"
+              'class'=>"validate",
+              'placeholder' => "RFC"
             ])!!}
-            <label for="icon_prefix"> RFC</label>
+           
       </div>
     </div>
     <button class="btn waves-effect waves-light left" type="submit" name="action" style="margin-right: 2em"
